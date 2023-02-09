@@ -1,0 +1,29 @@
+<!-- dashboard Nav -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/landing">TraineeCommunity</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="mobile-nav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/profiles">Trainees</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/feed/{{ token }}">Post Feed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/dashboard/{{ token }}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/dashboard/{{ token }}" class="nav-link">
+                        <img class="rounded-circle" style="width: 25px; margin-right: 5px" src="https://www.gravatar.com/avatar/anything?s=200&d=mm" alt="" title="You Must Have A Gravatar Connected To Your Email To Display An Image" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

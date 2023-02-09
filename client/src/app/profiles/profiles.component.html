@@ -1,0 +1,17 @@
+<app-nav-bar></app-nav-bar>
+<div class="row">
+    <div *ngFor="let profiles of profileData" class="card shadow p-3 mb-5 bg-body rounded container mt-5" style="width: 26rem; height: 16rem">
+        <h2 class="text-center fs-1">
+            {{ profiles.handle }}
+            <img src="{{ profiles.user.avatar }}" />
+        </h2>
+        <h5>{{ profiles.status }} at {{ profiles.company }}</h5>
+        <br />
+        <h5>{{ profiles.location }}</h5>
+        <div class="card-body text-center">
+            <button routerLink="/profile/{{ profiles.user._id }}" class="btn btn-info text-light fs-5">
+        View Profile
+      </button>
+        </div>
+    </div>
+</div>

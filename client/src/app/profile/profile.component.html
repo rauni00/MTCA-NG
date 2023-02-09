@@ -1,0 +1,128 @@
+<app-nav-bar></app-nav-bar>
+<!-- Profile -->
+<div class="profile">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-6">
+                        <a routerLink="/profiles" class="btn btn-light mb-3 float-left">Back To Profiles</a
+            >
+          </div>
+          <div class="col-6"></div>
+        </div>
+        <!-- Profile Header -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-body bg-info text-white mb-3">
+              <div class="row">
+                <div class="col-4 col-md-3 m-auto">
+                  <img
+                    class="rounded-circle"
+                    alt=""
+                    src="{{ profileData.user.avatar }}"
+                  />
+                </div>
+              </div>
+              <div class="text-center">
+                <h1 class="display-4 text-center">{{ profileData.handle }}</h1>
+                <p class="lead text-center">
+                  {{ profileData.status }} at {{ profileData.company }}
+                </p>
+
+                <p>{{ profileData.location }}</p>
+                <p>
+                  <a class="text-white p-2" href="{{ profileData.website }}">
+                    <i class="fas fa-globe fa-2x"></i>
+                  </a>
+                        <a class="text-white p-2" href="{{ profileData.social.twitter }}">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a class="text-white p-2" href="{{ profileData.social.facebook }}">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a class="text-white p-2" href="{{ profileData.social.linkedin }}">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a class="text-white p-2" href="{{ profileData.social.instagram }}">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Profile About-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-body bg-light mb-3">
+                    <h3 class="text-center text-info">
+                        {{ profileData.handle }} Bio
+                    </h3>
+                    <p class="lead">{{ profileData.bio }}</p>
+                    <hr />
+                    <h3 class="text-center text-info">Skill Set</h3>
+                    <div class="row">
+                        <div class="d-flex flex-wrap justify-content-center align-items-center">
+                            <div *ngFor="let skill of profileData.skills" class="p-3">
+                                <i class="fa fa-check"></i> {{ skill }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Profile Creds-->
+            <div class="row">
+                <!-- {{ profileData.experience }} -->
+                <div class="col-md-6">
+                    <h3 class="text-center text-info">Experience</h3>
+                    <ul class="list-group">
+                        <li *ngFor="let exp of profileData.experience" class="list-group-item">
+                            <h4>{{ exp.company }}</h4>
+                            <p>{{ exp.from | date }} - {{ exp.to | date }}</p>
+                            <p><strong>Position : </strong>{{ exp.title }}</p>
+                            <p><strong>Description</strong>{{ exp.description }}</p>
+                        </li>
+                    </ul>
+                </div>
+                <div *ngFor="let edu of profileData.education" class="col-md-6">
+                    <h3 class="text-center text-info">Education</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h4>{{ edu.school }}</h4>
+                            <p>{{ edu.from | date }} - {{ edu.to | date }}</p>
+                            <p><strong>Degree : </strong>{{ edu.degree }}</p>
+                            <p>
+                                <strong>Field Of Study : </strong>{{ edu.fieldofstudy }}
+                            </p>
+                            <p><strong>Description : </strong>{{ edu.description }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--Profile Github-->
+            <div ref="myRef">
+                <hr />
+                <h3 class="mb-4">Latest Github Repos</h3>
+                <div key="{repo.id}" class="card card-body mb-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>
+                                <a href="{repo.html_url}" class="text-info" target="_blank">Repository One
+                    </a>
+                            </h4>
+                            <p>Repository Description</p>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge badge-info mr-1"> Stars : 44 </span>
+                            <span class="badge badge-secondry mr-1"> Watchers : 21 </span>
+                            <span class="badge badge-success"> Forks : 122 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

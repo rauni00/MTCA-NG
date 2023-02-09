@@ -1,0 +1,77 @@
+<app-after-login-nav></app-after-login-nav>
+<!-- Post  -->
+<div class="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- post items -->
+                <div class="card card-body mb-3">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a routerLink="/profile/{{ id }}">
+                                <img class="rounded-circle d-none d-md-block" src="https://www.gravatar.com/avatar/anything?s=200&d=mm" alt="" />
+                            </a>
+                            <br />
+                            <p class="text-center">{{ postByID.name }}</p>
+                        </div>
+                        <div class="col md-10 p-md-5">
+                            <p class="lead">
+                                {{ postByID.text }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Comman Form -->
+                <div class="post-form mb-3">
+                    <div class="card card-info">
+                        <div class="card-header bg-info text-light">Say Something</div>
+                        <div class="card-body">
+                            <form action="">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Create Post" name=""></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-dark">submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- comment feed -->
+                <div class="card card-body mb-3">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a routerLink="/profile/{{ id }}">
+                                <img class="rounded-circle d-none d-md-block" src="https://www.gravatar.com/avatar/anything?s=200&d=mm" alt="" />
+                            </a>
+                            <br />
+                            <p class="text-center">kevin smith</p>
+                        </div>
+                        <div class="col md-10 p-md-5">
+                            <p class="lead">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium animi quo sapiente ducimus harum aliquid, debitis, quam aliquam modi soluta, quia fuga ab recusandae repellendus! Laboriosam tempora in ipsa vitae architecto quidem ipsam officiis fugit
+                                a accusantium sapiente maxime alias nemo rerum corrupti aliquam dicta, expedita repudiandae cum mollitia. Possimus, incidunt recusandae!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-body mb-3">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a routerLink="/profile/{{ id }}">
+                                <img class="rounded-circle d-none d-md-block" src="https://www.gravatar.com/avatar/anything?s=200&d=mm" alt="" />
+                            </a>
+                            <br />
+                            <p class="text-center">RAUNI</p>
+                        </div>
+                        <div class="col md-10 p-md-5">
+                            <p class="lead">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium animi quo sapiente ducimus harum aliquid, debitis, quam aliquam modi soluta, quia fuga ab recusandae repellendus! Laboriosam tempora in ipsa vitae architecto quidem ipsam officiis fugit
+                                a accusantium sapiente maxime alias nemo rerum corrupti aliquam dicta, expedita repudiandae cum mollitia. Possimus, incidunt recusandae!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.checkedClass {
+    border: 1px solid;
+    border-color: red;
+}
+
+.uncheckedClass {
+    background-color: greenyellow;
+}

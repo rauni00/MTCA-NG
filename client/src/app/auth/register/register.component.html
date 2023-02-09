@@ -1,0 +1,53 @@
+<app-nav-bar></app-nav-bar>
+<div class="register">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <h1 class="display-4 text-center">Sign Up</h1>
+                <p class="lead text-center">Create Your Trainee Community account</p>
+                <h6 *ngIf="success" class="text-success">
+                    Welcome {{ success }} Your Account is Successfully Created
+                </h6>
+                <form (ngSubmit)="onSubmit($event)">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" placeholder="Name" name="name" [(ngModel)]="name" />
+                        <small style="color: red" *ngIf="errors">
+              {{ errors.name }}
+            </small>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" placeholder="Email Address" name="email" [(ngModel)]="email" />
+                        <div style="color: red" *ngIf="errors">
+                            <small> {{ errors.email }}</small>
+                        </div>
+                        <small className="form-text text-muted">
+              This site uses Gravatar so if you want to profile image,use
+              Gravatar email</small
+            >
+          </div>
+          <div class="form group">
+            <input
+              [(ngModel)]="password"
+              type="password"
+              class="form-control form-control-lg"
+              placeholder="Password"
+              name="password"
+            />
+            <small style="color: red" *ngIf="errors">
+              {{ errors.password }}
+            </small>
+                        <br />
+                    </div>
+                    <div class="form group">
+                        <input [(ngModel)]="password2" type="password" class="form-control form-control-lg" placeholder="Confirm-Password" name="password2" />
+                        <small style="color: red" *ngIf="errors">
+              {{ errors.password2 }}
+            </small>
+                        <br />
+                    </div>
+                    <input type="submit" class="btn btn-info btn-block mt-4" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

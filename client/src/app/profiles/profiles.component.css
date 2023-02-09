@@ -1,0 +1,10 @@
+img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    float: left;
+}
+
+h5 {
+    margin-left: 8rem;
+}

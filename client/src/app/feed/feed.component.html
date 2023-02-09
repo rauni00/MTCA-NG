@@ -1,0 +1,72 @@
+<app-after-login-nav [token]="token"></app-after-login-nav>
+<!-- Post  -->
+<div class="feed">
+    <div class="container">
+        <!-- <h3 style="color: red" *ngIf="unauthorised">
+            {{ unauthorised }} User Please Login Again
+        </h3> -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- feed Form -->
+                <div class="post-form mb-3">
+                    <div class="card card-info">
+                        <div class="card-header bg-info text-light">Say Something...</div>
+                        <div class="card-body">
+                            <form (ngSubmit)="Submit($event)">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Enter Name" type="text" name="name" [(ngModel)]="name" />
+                                </div>
+                                <div class="form-group">
+                                    <textarea [(ngModel)]="text" class="form-control" placeholder="Create Post" name="text"></textarea>
+                                    <small style="color: red" *ngIf="error">{{ error }}</small>
+                                </div>
+
+                                <button type="submit" class="btn btn-dark">submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- post items -->
+                                <div class="card card-body mb-3">
+                                    <div *ngFor="let post of postData" class="row">
+                                        <div class="col-md-2">
+                                            <a>
+                                                <img class="rounded-circle d-none d-md-block" src="https://www.gravatar.com/avatar/anything?s=200&d=mm" alt="" />
+                                            </a>
+                                            <br />
+                                            <p class="text-center">{{ post.name }}</p>
+                                        </div>
+                                        <div class="col md-10 p-md-5">
+                                            <p class="lead">
+                                                {{ post.text }}
+                                            </p>
+                                            <button (click)="LikePost(post._id)" class="btn btn-light mr-1" type="button">
+                        <i class="text-info fas fa-thumbs-up"></i>
+                        <span class="badge badge-light">4</span>
+                      </button>
+                                            <button (click)="unLikePost(post._id)" type="button" class="btn btn-light mr-1">
+                        <i class="text-secondary fas fa-thumbs-down"></i>
+                      </button>
+                                            <a routerLink="/post/{{ post._id }}" class="btn btn-info mr-1">Comments</a
+                      >
+                      <a
+                        (click)="deletePost(post._id)"
+                        class="btn btn-danger mr-1"
+                        >Delete Comment</a
+                      >
+                      <!--  -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
